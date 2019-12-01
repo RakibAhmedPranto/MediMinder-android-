@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/add"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Add Medicine"
+            app:srcCompat="@mipmap/add" />
+        <item
+            android:id="@+id/list"
+            android:icon="@android:drawable/stat_notify_sync_noanim"
+            android:title="Medicine List"
+            app:srcCompat="@mipmap/list2" />
+        <item
+            android:id="@+id/cal"
+            android:icon="@android:drawable/ic_dialog_dialer"
+            android:title="Calender"
+            app:srcCompat="@mipmap/calender" />
+        <item
+            android:id="@+id/set"
+            android:enabled="true"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Tools"
+            android:visible="true" />
+        <item
+            android:id="@+id/exit"
+            android:enabled="true"
+            android:icon="@android:drawable/ic_menu_close_clear_cancel"
+            android:title="Exit"
+            android:visible="true" />
+    </group>
+
+
+
+</menu>

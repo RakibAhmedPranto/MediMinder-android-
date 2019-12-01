@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.hp.mediminder">
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".splash"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ReminderEditActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".TaskPreferences"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.Light" />
+        <activity android:name=".calender" />
+        <activity android:name=".ReminderListActivity2" />
+        <activity android:name=".settings"></activity>
+
+        <receiver android:name=".OnBootReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED"
+                    android:enabled="true" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".OnAlarmReceiver"
+            android:enabled="true" />
+
+        <service
+            android:name=".ReminderService"
+            android:enabled="true" />
+        <!--
+        <activity android:name=".ListDataActivity"></activity>
+        <activity android:name=".EditActivity"></activity>
+        <activity android:name=".ListDataActivity2"></activity>
+        -->
+
+    </application>
+
+</manifest>
